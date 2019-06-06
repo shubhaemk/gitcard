@@ -1,0 +1,41 @@
+.placeholderLight::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: hsl(0, 0%, 40%);
+    font-family : 'Roboto Mono'
+}
+.placeholderLight:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: hsl(0, 0%, 40%);
+    font-family : 'Roboto Mono'
+}
+.placeholderLight::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color:hsl(0, 0%, 40%);
+    font-family : 'Roboto Mono'
+}
+.placeholderLight:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: hsl(0, 0%, 40%);
+    font-family : 'Roboto Mono'
+}
+
+.placeholderDark::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: hsl(0, 0%, 60%);
+    font-family : 'Roboto Mono'
+}
+.placeholderDark:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: hsl(0, 0%, 60%);
+    font-family : 'Roboto Mono'
+}
+.placeholderDark::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: hsl(0, 0%, 60%);
+    font-family : 'Roboto Mono'
+}
+.placeholderDark:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: hsl(0, 0%, 60%);
+    font-family : 'Roboto Mono'
+}
