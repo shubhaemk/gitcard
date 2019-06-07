@@ -19,20 +19,18 @@ class Card extends Component {
     render(){
         return(
             <div ref={this.github}>
-                <div className='card has-margin-60' style={{width : '60rem', borderRadius : '9px', backgroundColor : this.props.card_background }}>
-                    <div className='container'>
-                        <div className='columns'>
-                            <div className='column is-one-fifth has-margin-right-10'>
-                                <Profile></Profile>
-                            </div>
-                            <div className='column is-three-fifths'>
-                                <div className='columns'>
-                                    <div className='column is-9 has-margin-right-25'>
-                                        <Repos></Repos>
-                                    </div>
-                                    <div className='column is-3 has-margin-top-10'>
-                                        <QR></QR>
-                                    </div>
+                <div className='card' style={{width : '60rem', borderRadius : '9px', backgroundColor : this.props.card_background }}>
+                    <div className='columns'>
+                        <div className='column is-3'>
+                            <Profile></Profile>
+                        </div>
+                        <div className='column is-9'>
+                            <div className='columns'>
+                                <div className='column is-9'>
+                                    <Repos></Repos>
+                                </div>
+                                <div className='column is-3'>
+                                    <QR></QR>
                                 </div>
                             </div>
                         </div>

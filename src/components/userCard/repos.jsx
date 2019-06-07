@@ -5,14 +5,13 @@ import { connect } from 'react-redux';
 class Repos extends Component{
     render(){
         return(
-            <div className='container'>
+            <div className=''>
                 <p className='has-margin-bottom-10' style={{fontFamily : 'Roboto Mono' , fontSize: '25px', color : this.props.card_text}}>
                     Repositeries
                 </p>
                 <div className='columns'>
-                    <div className='column is-3'>
-                        <div className='has-margin-bottom-10'>
-                            
+                    <div className='column is-6'>
+                        <div className='has-margin-bottom-10'>                         
                             <span style={{fontFamily : 'Roboto Mono' , fontSize: '15px', color : this.props.card_text, display: 'inline-block', width: '23ch', whiteSpace: 'nowrap', overflow: 'hidden',textOverflow: 'ellipsis'}}>
                                 <i className="fas fa-book has-margin-right-10"></i>{this.props.latest_repos === null ? null : (this.props.latest_repos[0] === undefined ? 'N/A' : this.props.latest_repos[0]['name'])}
                             </span>
@@ -29,7 +28,7 @@ class Repos extends Component{
                             </p>
                         </div>
                     </div>
-                    <div className='column is-3'>
+                    <div className='column is-6'>
                         <div className='has-margin-bottom-10'>
                             <span style={{fontFamily : 'Roboto Mono' , fontSize: '15px', color : this.props.card_text, display: 'inline-block', width: '23ch', whiteSpace: 'nowrap', overflow: 'hidden',textOverflow: 'ellipsis'}}>
                                 <i className="fas fa-book has-margin-right-10"></i>{this.props.latest_repos === null ? null : (this.props.latest_repos[2] === undefined ? 'N/A' : this.props.latest_repos[2]['name'])}
