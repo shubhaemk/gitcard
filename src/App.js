@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 
+import './App.css';
+
 import SearchBar from './components/searchBar/searchBar';
 import Result from './components/userCard/result';
 import Footer from './components/footer/footer';
@@ -8,7 +10,7 @@ import Footer from './components/footer/footer';
 class App extends Component {
   render(){
     return (
-      <div className="hero is-fullheight" style={{ backgroundColor : (this.props.theme === 'light' ? 'hsl(0, 0%, 90%)' : 'hsl(0, 0%, 20%)') }}>
+      <div className="hero is-fullheight font" style={{ backgroundColor : (this.props.theme === 'light' ? 'hsl(0, 0%, 90%)' : 'hsl(0, 0%, 20%)') }}>
         <SearchBar></SearchBar>
         <Result></Result>
         <Footer></Footer>

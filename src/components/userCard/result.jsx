@@ -7,15 +7,13 @@ import Customise from './customise';
 class Result extends Component {
     render(){
         return(
-            <div style={{ backgroundColor : (this.props.theme === 'light' ? 'hsl(0, 0%, 90%)' : 'hsl(0, 0%, 20%)'), height:'84vh' }} className=''>
-                <div className='columns'>
-                    <div className='column is-9'>
-                        <Card></Card>
-                    </div>
-                    <div className='colum is-1' style={{ height:'84vh', borderLeft : (this.props.theme === 'light' ? '1px solid hsl(0, 0%, 95%)' : '1px solid hsl(0, 0%, 5%)')}}></div>
-                    <div className='column is-2'>
-                        <Customise></Customise>
-                    </div>
+            <div className='columns'>
+                <div className='column is-9'>
+                    <Card></Card>
+                </div>
+                <div className='colum is-1' style={{ height:'84vh', borderLeft : (this.props.theme === 'light' ? '1px solid hsl(0, 0%, 95%)' : '1px solid hsl(0, 0%, 5%)')}}></div>
+                <div className='column is-2'>
+                    <Customise></Customise>
                 </div>
             </div>
         )

@@ -65,20 +65,28 @@ class SearchBar extends Component {
 
     render(){
         return(
-            <nav className='navbar is-overlay' role='navigation' aria-label='main navigation' style={{ background : (this.props.theme === 'light' ? 'hsl(0, 0%, 95%)' : 'hsl(0, 0%,5%)')}}>
-                <div className='navbar-brand has-margin-left-15'>
-                    <a className="navbar-item" href="/ddd">
-                        <img src={'./assets/mark-'+this.props.theme+'.png'} width='30rem' height='200rem' alt='github-logo'></img>
-                    </a>
-                    <p className='is-size-3 has-margin-top-10' style={{fontFamily : 'Roboto Mono' , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>
-                        GitCard
-                        <span className='has-margin-left-10' style={{fontSize : '0.70rem', fontFamily : 'Roboto Mono'}}>Generate shareable GitHub profile cards</span>
-                    </p>
+            <div className='columns is-multiline' style={{ background : (this.props.theme === 'light' ? 'hsl(0, 0%, 95%)' : 'hsl(0, 0%,5%)')}}>
+                <div className='column is-4 has-text-centered has-margin-top-10'>
+                    <div className="columns">
+                        <div className="column">
+                            <a href="/ddd">
+                                <img src={'./assets/mark-'+this.props.theme+'.png'} width='30rem' height='30rem' alt='github-logo'></img>
+                            </a>
+                        </div>
+                        <div className="column">
+                            <span className='is-size-3 has-margin-top-10' style={{fontFamily : 'Roboto Mono' , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>
+                                GitCard
+                            </span>
+                        </div>
+                        <div className='column'>
+                            <span className='has-margin-left-10' style={{fontSize : '0.70rem', fontFamily : 'Roboto Mono'}}>Generate shareable GitHub profile cards</span>
+                        </div>
+                    </div>
                 </div>
-                <div className='navbar-item'>
-                    <p className='has-margin-right-15 has-margin-left-20 is-size-3' style={{fontFamily : 'Roboto' , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'{ {'}</p>
-                    <div className={this.props.control_div}>
-                        <input className={ this.props.user_found === false && this.props.user_name !== '' ? 'input is-danger '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark') : 'input '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark')} type="text" placeholder="GitHub User Name" value={this.props.user_name} onChange={this.updateUserName} style={{width : '17rem', height : '2.2rem' , backgroundColor : ( this.props.theme === 'light' ? 'hsl(0, 0%, 96%)' : 'hsl(0, 0%, 20%)') , color : ( this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}} autoFocus={true}></input>
+                <div className='column is-3 has-text-centered has-margin-top-10 '>
+                    <span className='is-size-3' style={{fontFamily : 'Roboto' , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'{{'}</span>
+                    <span className={this.props.control_div}>
+                        <input className={ this.props.user_found === false && this.props.user_name !== '' ? 'has-margin-top-10 input is-danger '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark') : 'has-margin-top-10 input '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark')} type="text" placeholder="GitHub User Name" value={this.props.user_name} onChange={this.updateUserName} style={{width : '16rem', height : '2.2rem' , backgroundColor : ( this.props.theme === 'light' ? 'hsl(0, 0%, 96%)' : 'hsl(0, 0%, 20%)') , color : ( this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}} autoFocus={true}></input>
                         {
                             this.props.control_div === 'control has-icons-right' ? (
                                 <span className='icon is-right'>
@@ -88,20 +96,18 @@ class SearchBar extends Component {
                                 null
                             )
                         }
-                    </div>
-                    <p className='has-margin-left-15 is-size-3' style={{fontFamily : 'Roboto' , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'} }'}</p>
+                    </span>
+                    <span className='is-size-3' style={{fontFamily : 'Roboto' , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'}}'}</span>
                 </div>
-                <div className="navbar-end has-margin-right-35 has-margin-top-10">
-                    <p className='is-size-3' style={{fontFamily : 'Roboto Mono' , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>
-                        <span className='' style={{fontSize : '0.70rem', fontFamily : 'Roboto Mono'}}>Made with Bulma, React & GitHub APIv3 by </span>
-                        <a href='https://github.com/shubhaemk' target="_blank" rel="noopener noreferrer" style={{ textDecoration : 'none', color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Shubhaemk</a>
-                    </p>
+                <div className='column is-5 has-text-centered has-margin-top-10'>
+                    <span style={{fontSize : '0.70rem',color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Made with Bulma, React & GitHub APIv3 by </span>
                     <a href='https://github.com/shubhaemk' target="_blank" rel="noopener noreferrer">
-                        <img className='has-margin-top-5 has-margin-left-5' src='https://avatars1.githubusercontent.com/u/44347043?v=4' alt='shubhaemk-logo' style={{display: 'block', width : '2rem', height : '2rem', borderRadius: '50%'}}></img>
-                    </a>       
+                        <span className='is-size-3' style={{ color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Shubhaemk</span>
+                        <img className='is-marginless' src='https://avatars1.githubusercontent.com/u/44347043?v=4' alt='shubhaemk-logo' style={{display: 'inline', width : '2rem', height : '2rem', borderRadius: '50%'}}></img>
+                    </a>
                 </div>
-            </nav>
-        )
+            </div>
+      )
     }
 }
 

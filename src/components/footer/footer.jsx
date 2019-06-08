@@ -8,7 +8,7 @@ class Footer extends Component {
         return(
             <footer className='custom-footer' style={{ background : (this.props.theme === 'light' ? 'hsl(0, 0%, 95%)' : 'hsl(0, 0%,5%)') , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)' )}}>
                 <div className="content has-text-centered has-margin-top-20">
-                    <div className='columns has-margin-right-10'>
+                    <div className='columns is-mobile has-margin-right-10'>
                         <div className='column'>
                             Hire Me
                         </div>
