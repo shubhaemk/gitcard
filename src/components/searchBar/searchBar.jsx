@@ -65,48 +65,46 @@ class SearchBar extends Component {
 
     render(){
         return(
-            <div className='columns' style={{ background : (this.props.theme === 'light' ? 'hsl(0, 0%, 95%)' : 'hsl(0, 0%,5%)')}}>
-                <div className='column is-4 has-margin-left-10'>
-                    <div className='level'>
-                        <div className='level-item'>
-                            <a href="/ddd">
-                                <img src={'./assets/mark-'+this.props.theme+'.png'} width='30rem' height='30rem' alt='github-logo'></img>
-                            </a>
-                        </div>
-                        <div className='level-item'>
-                            <span className='is-size-3 has-margin-top-10' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>
-                                GitCard
-                            </span>
-                        </div>
-                        <div className='level-item has-margin-top-20'>
-                            <span className='has-margin-left-10' style={{fontSize : '0.70rem'}}>Generate shareable GitHub profile cards</span>
-                        </div>
+            <div className='columns is-vcentered' style={{ background : (this.props.theme === 'light' ? 'hsl(0, 0%, 95%)' : 'hsl(0, 0%,5%)')}}>
+                <div className='column is-4'>
+                    <div className="level level-item">
+                        <a href="/ddd" className=''>
+                            <img src={'./assets/mark-'+this.props.theme+'.png'} width='30rem' height='30rem' alt='github-logo'></img>
+                        </a>
+                        <span className='is-size-3' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>
+                            GitCard
+                        </span>
+                        <span className='' style={{fontSize : '0.70rem'}}>Generate shareable GitHub profile cards</span>
                     </div>
                 </div>
-                <div className='column is-3 has-margin-left-40'>
-                    <span className='is-size-3' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'{{'}</span>
-                    <span className={this.props.control_div}>
-                        <input className={ this.props.user_found === false && this.props.user_name !== '' ? 'has-margin-top-10 input is-danger '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark') : 'has-margin-top-10 input '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark')} type="text" placeholder="GitHub User Name" value={this.props.user_name} onChange={this.updateUserName} style={{width : '16rem', height : '2.2rem' , backgroundColor : ( this.props.theme === 'light' ? 'hsl(0, 0%, 96%)' : 'hsl(0, 0%, 20%)') , color : ( this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}} autoFocus={true}></input>
-                        {
-                            this.props.control_div === 'control has-icons-right' ? (
-                                <span className='icon is-right'>
-                                    <i className={ this.props.user_found === false && this.props.user_name !== '' ? 'fas fa-times' : 'fas fa-check'} style={{color : ( this.props.user_found === false && this.props.user_name !== '' ? '#F00' : '#0F0') }}></i>
-                                </span>
-                            ) : (
-                                null
-                            )
-                        }
-                    </span>
-                    <span className='is-size-3' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'}}'}</span>          
+                <div className='column is-4'>
+                    <div className="level level-item">
+                        <span className='is-size-3' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'{{'}</span>
+                        <span className={this.props.control_div}>
+                            <input className={ this.props.user_found === false && this.props.user_name !== '' ? 'has-margin-top-10 input is-danger '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark') : 'has-margin-top-10 input '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark')} type="text" placeholder="GitHub User Name" value={this.props.user_name} onChange={this.updateUserName} style={{width : '16rem', height : '2.2rem' , backgroundColor : ( this.props.theme === 'light' ? 'hsl(0, 0%, 96%)' : 'hsl(0, 0%, 20%)') , color : ( this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}} autoFocus={true}></input>
+                            {
+                                this.props.control_div === 'control has-icons-right' ? (
+                                    <span className='icon is-right'>
+                                        <i className={ this.props.user_found === false && this.props.user_name !== '' ? 'fas fa-times' : 'fas fa-check'} style={{color : ( this.props.user_found === false && this.props.user_name !== '' ? '#F00' : '#0F0') }}></i>
+                                    </span>
+                                ) : (
+                                    null
+                                )
+                            }
+                        </span>
+                        <span className='is-size-3' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'}}'}</span>          
+                    </div>
                 </div>
-                <div className='column is-5 level level-item has-margin-left-20'>
-                    <span style={{fontSize : '0.70rem',color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Made with Bulma, React & GitHub APIv3 by </span>
-                    <a href='https://github.com/shubhaemk' target="_blank" rel="noopener noreferrer">
-                        <span className='is-size-3' style={{ color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Shubhaemk</span>
-                    </a>
-                    <a href='https://github.com/shubhaemk' target="_blank" rel="noopener noreferrer">
-                        <img className='is-marginless' src='https://avatars1.githubusercontent.com/u/44347043?v=4' alt='shubhaemk-logo' style={{display: 'inline', width : '2rem', height : '2rem', borderRadius: '50%'}}></img>
-                    </a>
+                <div className='column is-4'>
+                    <div className="level level-item">
+                        <span style={{fontSize : '0.70rem',color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Made with GitHub,React,Redux & Bulma by </span>
+                        <a href='https://github.com/shubhaemk' target="_blank" rel="noopener noreferrer">
+                            <span className='is-size-3' style={{ color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Shubham</span>
+                        </a>
+                        <a href='https://github.com/shubhaemk' target="_blank" rel="noopener noreferrer">
+                            <img className='' src='https://avatars1.githubusercontent.com/u/44347043?v=4' alt='shubhaemk-logo' style={{display: 'inline', width : '2rem', height : '2rem', borderRadius: '50%'}}></img>
+                        </a>
+                    </div>
                 </div>
             </div>
       )
