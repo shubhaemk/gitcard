@@ -65,26 +65,26 @@ class SearchBar extends Component {
 
     render(){
         return(
-            <div className='columns is-multiline' style={{ background : (this.props.theme === 'light' ? 'hsl(0, 0%, 95%)' : 'hsl(0, 0%,5%)')}}>
-                <div className='column is-4 has-text-centered has-margin-top-10'>
-                    <div className="columns">
-                        <div className="column">
+            <div className='columns' style={{ background : (this.props.theme === 'light' ? 'hsl(0, 0%, 95%)' : 'hsl(0, 0%,5%)')}}>
+                <div className='column is-4 has-margin-left-10'>
+                    <div className='level'>
+                        <div className='level-item'>
                             <a href="/ddd">
                                 <img src={'./assets/mark-'+this.props.theme+'.png'} width='30rem' height='30rem' alt='github-logo'></img>
                             </a>
                         </div>
-                        <div className="column">
-                            <span className='is-size-3 has-margin-top-10' style={{fontFamily : 'Roboto Mono' , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>
+                        <div className='level-item'>
+                            <span className='is-size-3 has-margin-top-10' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>
                                 GitCard
                             </span>
                         </div>
-                        <div className='column'>
-                            <span className='has-margin-left-10' style={{fontSize : '0.70rem', fontFamily : 'Roboto Mono'}}>Generate shareable GitHub profile cards</span>
+                        <div className='level-item has-margin-top-20'>
+                            <span className='has-margin-left-10' style={{fontSize : '0.70rem'}}>Generate shareable GitHub profile cards</span>
                         </div>
                     </div>
                 </div>
-                <div className='column is-3 has-text-centered has-margin-top-10 '>
-                    <span className='is-size-3' style={{fontFamily : 'Roboto' , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'{{'}</span>
+                <div className='column is-3 has-margin-left-40'>
+                    <span className='is-size-3' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'{{'}</span>
                     <span className={this.props.control_div}>
                         <input className={ this.props.user_found === false && this.props.user_name !== '' ? 'has-margin-top-10 input is-danger '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark') : 'has-margin-top-10 input '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark')} type="text" placeholder="GitHub User Name" value={this.props.user_name} onChange={this.updateUserName} style={{width : '16rem', height : '2.2rem' , backgroundColor : ( this.props.theme === 'light' ? 'hsl(0, 0%, 96%)' : 'hsl(0, 0%, 20%)') , color : ( this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}} autoFocus={true}></input>
                         {
@@ -97,12 +97,14 @@ class SearchBar extends Component {
                             )
                         }
                     </span>
-                    <span className='is-size-3' style={{fontFamily : 'Roboto' , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'}}'}</span>
+                    <span className='is-size-3' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'}}'}</span>          
                 </div>
-                <div className='column is-5 has-text-centered has-margin-top-10'>
+                <div className='column is-5 level level-item has-margin-left-20'>
                     <span style={{fontSize : '0.70rem',color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Made with Bulma, React & GitHub APIv3 by </span>
                     <a href='https://github.com/shubhaemk' target="_blank" rel="noopener noreferrer">
                         <span className='is-size-3' style={{ color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Shubhaemk</span>
+                    </a>
+                    <a href='https://github.com/shubhaemk' target="_blank" rel="noopener noreferrer">
                         <img className='is-marginless' src='https://avatars1.githubusercontent.com/u/44347043?v=4' alt='shubhaemk-logo' style={{display: 'inline', width : '2rem', height : '2rem', borderRadius: '50%'}}></img>
                     </a>
                 </div>
