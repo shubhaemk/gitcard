@@ -81,7 +81,7 @@ class SearchBar extends Component {
                         </div>
                     </div>
                 </div>
-                <div className='column is-4 has-margin-top-20 has-text-centered'>
+                <div className='column is-4 has-margin-top-15 has-text-centered'>
                     <span className='is-size-4' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'{{'}</span>
                     <span className={this.props.control_div}>
                         <input className={ this.props.user_found === false && this.props.user_name !== '' ? 'input is-danger '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark') : 'input '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark')} type="text" placeholder="GitHub User Name" value={this.props.user_name} onChange={this.updateUserName} style={{width : '16rem', height : '2.2rem' , backgroundColor : ( this.props.theme === 'light' ? 'hsl(0, 0%, 96%)' : 'hsl(0, 0%, 20%)') , color : ( this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}} autoFocus={true}></input>
