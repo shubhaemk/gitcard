@@ -19,7 +19,7 @@ class Card extends Component {
     render(){
         return(
             <div ref={this.github}>
-                <div className='card' style={{width : '60rem', borderRadius : '9px', backgroundColor : this.props.card_background }}>
+                <div className='card' style={{ width : '60rem', borderRadius : '9px', backgroundColor : this.props.card_background }}>
                     <div className='columns'>
                         <div className='column is-4'>
                             <Profile></Profile>

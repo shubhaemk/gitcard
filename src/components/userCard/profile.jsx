@@ -11,7 +11,7 @@ class Profile extends Component{
                     <a href={'https://github.com/'+this.props.profile['login']} target="_blank" rel="noopener noreferrer" className='h4 has-margin-left-25' style={{fontFamily : 'Roboto Mono' , color : this.props.card_subtext }}>{'@'+this.props.profile['login']}</a>
                 </p>
                 { this.props.profile['bio'] === null ? null : (
-                    <div className='has-margin-left-25 has-margin-bottom-10'>
+                    <div className='has-margin-left-25 has-margin-bottom-10 is-hidden-mobile'>
                         <p href={this.props.profile['blog']} target="_blank" rel="noopener noreferrer" style={{fontFamily : 'Roboto Mono' , fontSize: '12px', display: 'inline-block', width: '15%', color : this.props.card_subtext}}>{'`'+this.props.profile['bio']+'`'}</p>
                     </div>
                 )}
