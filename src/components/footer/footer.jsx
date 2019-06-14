@@ -62,6 +62,11 @@ class Footer extends Component {
                             <a href='https://www.linkedin.com/in/shubham-kamath/' target="_blank" rel="noopener noreferrer" style={{ textDecoration : 'none', color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')  }}><i className="fab fa-linkedin"></i></a>
                         </div>
                     </div>
+                    <div className='columns is-mobile'>
+                        <div className='column has-text-centered'>
+                            <span className='is-size-7 has-margin-top-10 has-margin-bottom-20' style={{ color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')  }}>{'{ Educational Purpose only }'}</span>
+                        </div>
+                    </div>
                 </footer>
             </div>
         );
