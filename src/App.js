@@ -10,7 +10,7 @@ import Footer from './components/footer/footer';
 class App extends Component {
   render(){
     return (
-      <div className="font" style={{ backgroundColor : (this.props.theme === 'light' ? 'hsl(0, 0%, 90%)' : 'hsl(0, 0%, 20%)') }}>
+      <div className="hero font is-fullheight" style={{ overflow : 'hidden', width : '100vw', backgroundColor : (this.props.theme === 'light' ? 'hsl(0, 0%, 90%)' : 'hsl(0, 0%, 20%)') }}>
         <SearchBar></SearchBar>
         <Result></Result>
         <Footer></Footer>
