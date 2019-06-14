@@ -76,7 +76,7 @@ class SearchBar extends Component {
                                 GitCard
                             </span>
                         </div>
-                        <div className="column is-7 has-text-centered is-paddingless  is-italic">
+                        <div className="column is-7 has-text-centered is-italic">
                             <span className='' style={{fontSize : '0.70rem',color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Generate Shareable GitHub cards</span>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ class SearchBar extends Component {
                 </div>
                 <div className='column is-4 has-margin-top-10'>
                     <div className="columns is-vcentered">
-                        <div className="column is-7 has-text-centered  is-italic">
+                        <div className="column is-7 has-text-centered is-italic">
                             <span style={{fontSize : '0.70rem',color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>Made with GitHub,React and Bulma by </span>
                         </div>
                         <div className="column is-5 has-text-centered has-text-weight-bold">
