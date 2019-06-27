@@ -37,7 +37,7 @@ class Footer extends Component {
                         </div>
                     </div>
                 </footer>
-                <footer className='is-hidden-desktop' style={{ background : (this.props.theme === 'light' ? 'hsl(0, 0%, 95%)' : 'hsl(0, 0%,5%)') , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)' )}}>
+                <footer className='is-hidden-desktop is-hidden-tablet' style={{ background : (this.props.theme === 'light' ? 'hsl(0, 0%, 95%)' : 'hsl(0, 0%,5%)') , color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)' )}}>
                     <div className='columns is-mobile'>
                         <div className='column has-text-centered'>
                             Hire
