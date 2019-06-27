@@ -18,19 +18,21 @@ class Card extends Component {
 
     render(){
         return(
-            <div ref={this.github}>
-                <div className='card' style={{ width : '60rem', borderRadius : '9px', backgroundColor : this.props.card_background }}>
-                    <div className='columns'>
-                        <div className='column is-4'>
-                            <Profile></Profile>
-                        </div>
-                        <div className='column is-8'>
-                            <div className='columns'>
-                                <div className='column is-9'>
-                                    <Repos></Repos>
-                                </div>
-                                <div className='column is-3'>
-                                    <QR></QR>
+            <div>
+                <div ref={this.github} className='has-margin-bottom-50 is-hidden-mobile'>
+                    <div className='card' style={{ borderRadius : '9px', backgroundColor : this.props.card_background }}>
+                        <div className='columns'>
+                            <div className='column is-4'>
+                                <Profile></Profile>
+                            </div>
+                            <div className='column is-8'>
+                                <div className='columns'>
+                                    <div className='column is-9'>
+                                        <Repos></Repos>
+                                    </div>
+                                    <div className='column is-3'>
+                                        <QR></QR>
+                                    </div>
                                 </div>
                             </div>
                         </div>
