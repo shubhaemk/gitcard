@@ -8,10 +8,9 @@ class Result extends Component {
     render(){
         return(
             <div className='columns'>
-                <div className='column is-9 has-margin-100'>
+                <div className='column is-7 has-margin-50'>
                     <Card></Card>
                 </div>
-                <div className='colum is-1'></div>
                 <div className='column is-2'>
                     <Customise></Customise>
                 </div>
