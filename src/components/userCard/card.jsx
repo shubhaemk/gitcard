@@ -22,15 +22,15 @@ class Card extends Component {
                 <div ref={this.github} className='has-margin-bottom-50 is-hidden-mobile'>
                     <div className='card' style={{ borderRadius : '9px', backgroundColor : this.props.card_background }}>
                         <div className='columns'>
-                            <div className='column is-4'>
+                            <div className='column is-3'>
                                 <Profile></Profile>
                             </div>
-                            <div className='column is-8'>
+                            <div className='column is-9 has-margin-10'>
                                 <div className='columns'>
-                                    <div className='column is-9'>
+                                    <div className='column is-8'>
                                         <Repos></Repos>
                                     </div>
-                                    <div className='column is-3'>
+                                    <div className='column is-4'>
                                         <QR></QR>
                                     </div>
                                 </div>
