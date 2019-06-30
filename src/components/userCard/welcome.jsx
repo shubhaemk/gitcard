@@ -17,7 +17,7 @@ class Welcome extends Component {
             }else if(this.props.user_name !== '' && this.props.user_found === false){
                 return(
                     <div className='has-text-centered has-margin-bottom-60'>
-                        <p className="is-size-3" style={{color : 'red'}}>` User Not Found! `</p>
+                        <p className="is-size-3" style={{color : 'red'}}>` Sorry, GitCard have met an Error! `</p>
                         <img src={'./assets/not-found.png'} alt='home-icon' height='300px' width='300px'></img>
                         <p className="is-size-6" style={{color : 'red'}}>{'/* Check your Internet Connection || API Limit exceded || Wrong UserName */'}</p>
                     </div>
