@@ -31,7 +31,7 @@ class SearchBar extends Component {
                         }
                         this.props.updateRepos(repos['data'].filter((element,index)=>{return index < 5;}));
                         this.props.updateUserFound(true);
-                        this.props.updateControlDiv('control has-icons-right');
+                        this.props.updateSearch('end');
                     })
                 });
             })
@@ -42,7 +42,7 @@ class SearchBar extends Component {
                     this.props.updateProfile({key , value : ''});
                 }
                 this.props.updateUserFound(false);
-                this.props.updateControlDiv('control has-icons-right');
+                this.props.updateSearch('end');
             });
 
         }else{
@@ -52,13 +52,13 @@ class SearchBar extends Component {
                 this.props.updateProfile({key , value : ''});
             }
             this.props.updateUserFound(false);
-            this.props.updateControlDiv('control');
+            this.props.updateSearch('end');
         }
     }
 
     updateUserName = (event) => {
+        this.props.updateSearch('start');
         this.props.updateUserName(event.target.value);
-        this.props.updateControlDiv('control is-loading');
         event.persist();
         this.delayedSearch(event);
     }
@@ -83,18 +83,7 @@ class SearchBar extends Component {
                 </div>
                 <div className='column is-4 has-margin-top-15 has-text-centered'>
                     <span className='is-size-4 has-margin-right-5' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'{{'}</span>
-                    <span className={this.props.control_div}>
-                        <input className={ this.props.user_found === false && this.props.user_name !== '' ? 'input is-danger '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark') : 'input '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark')} type="text" placeholder="GitHub User Name" value={this.props.user_name} onChange={this.updateUserName} style={{width : '14rem', height : '2.2rem' , backgroundColor : ( this.props.theme === 'light' ? 'hsl(0, 0%, 96%)' : 'hsl(0, 0%, 20%)') , color : ( this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}} autoFocus={true}></input>
-                        {
-                            this.props.control_div === 'control has-icons-right' ? (
-                                <span className='icon is-right'>
-                                    <i className={ this.props.user_found === false && this.props.user_name !== '' ? 'fas fa-timesz' : 'fas fa-check'} style={{color : ( this.props.user_found === false && this.props.user_name !== '' ? '#F00' : '#0F0') }}></i>
-                                </span>
-                            ) : (
-                                null
-                            )
-                        }
-                    </span>
+                    <input className={ this.props.user_found === false && this.props.user_name !== '' ? 'input is-danger '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark') : 'input '+(this.props.theme === 'light' ? 'placeholderLight' : 'placeholderDark')} type="text" placeholder="GitHub User Name" value={this.props.user_name} onChange={this.updateUserName} style={{width : '14rem', height : '2.2rem' , backgroundColor : ( this.props.theme === 'light' ? 'hsl(0, 0%, 96%)' : 'hsl(0, 0%, 20%)') , color : ( this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}} autoFocus={true}></input>
                     <span className='is-size-4 has-margin-left-5' style={{color : (this.props.theme === 'light' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 0%, 90%)')}}>{'}}'}</span>          
                 </div>
                 <div className='column is-4 has-margin-top-10'>
@@ -147,6 +136,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         updateContributionChart : (value) => {
             dispatch(gitcard('update_contribution_chart',value))
+        },
+        updateSearch : (value) => {
+            dispatch(gitcard('update_search',value))
         }
     }
 }
