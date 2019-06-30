@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import './App.css';
 
 import SearchBar from './components/searchBar/searchBar';
-import Result from './components/userCard/result';
+import Welcome from './components/userCard/welcome';
 import Footer from './components/footer/footer';
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="hero font is-fullheight" style={{ overflow : 'hidden', width : '100vw', backgroundColor : (this.props.theme === 'light' ? 'hsl(0, 0%, 90%)' : 'hsl(0, 0%, 20%)') }}>
         <SearchBar></SearchBar>
-        <Result></Result>
+        <Welcome></Welcome>
         <Footer></Footer>
       </div>
     )
