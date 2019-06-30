@@ -60,6 +60,11 @@ let gitCard = (state = initState, action) => {
                 ...state,
                 github : action.value
             }
+        case 'update_search' :
+            return {
+                ...state,
+                search : action.value
+            }
         default :
             return {
                 ...state

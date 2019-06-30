@@ -19,6 +19,7 @@ export const initState = {
         company : '',
         bio : ''
     },
+    search : 'end',
     latest_repos : null,
     contribution_chart : null,
     github : null

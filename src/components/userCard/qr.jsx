@@ -5,7 +5,7 @@ import QRCode from 'qrcode.react';
 class QR extends Component{
     render(){
         return(
-            <div>
+            <div className='has-text-centered'>
                 <div>
                     <QRCode value={'https://github.com/'+this.props.profile['login']} renderAs='svg' includeMargin={true} bgColor={this.props.theme === 'light' ? '#DFDFDF' : '#9F9F9F'} style={{borderRadius : '9px'}}/>
                 </div>
