@@ -6,7 +6,7 @@ class Profile extends Component{
         return(
             <div className=''>
                 <img className='image has-margin-10 has-margin-left-20' src={this.props.profile['avatar_url']} alt='github avatar' style={{ borderRadius : '9px', height : '180px', width : '180px' }}></img>
-                <p className='h4 has-margin-left-25' style={{fontFamily : 'Roboto Mono' , color : this.props.card_text }}>{ this.props.profile['name'] === null ? null : this.props.profile['name'] } </p>
+                <p className='h4 has-margin-left-25' style={{color : this.props.card_text }}>{ this.props.profile['name'] === null ? null : this.props.profile['name'] } </p>
                 <p className={this.props.profile['bio'] === null ? '' : 'has-margin-bottom-10'}>
                     <a href={'https://github.com/'+this.props.profile['login']} target="_blank" rel="noopener noreferrer" className='h4 has-margin-left-25' style={{fontFamily : 'Roboto Mono' , color : this.props.card_subtext }}>{'@'+this.props.profile['login']}</a>
                 </p>

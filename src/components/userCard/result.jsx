@@ -11,7 +11,7 @@ class Result extends Component {
                 <div className='column is-7 has-margin-50'>
                     <Card></Card>
                 </div>
-                <div className='column is-2'>
+                <div className='column is-5'>
                     <Customise></Customise>
                 </div>
             </div>
