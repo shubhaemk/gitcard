@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/gitcard/static/css/main.a72ced97.chunk.css",
+    "main.js": "/gitcard/static/js/main.0033af1c.chunk.js",
+    "main.js.map": "/gitcard/static/js/main.0033af1c.chunk.js.map",
+    "runtime~main.js": "/gitcard/static/js/runtime~main.8b074d3f.js",
+    "runtime~main.js.map": "/gitcard/static/js/runtime~main.8b074d3f.js.map",
+    "static/css/2.457a6994.chunk.css": "/gitcard/static/css/2.457a6994.chunk.css",
+    "static/js/2.6eb9302c.chunk.js": "/gitcard/static/js/2.6eb9302c.chunk.js",
+    "static/js/2.6eb9302c.chunk.js.map": "/gitcard/static/js/2.6eb9302c.chunk.js.map",
+    "index.html": "/gitcard/index.html",
+    "precache-manifest.6e80b344a0427b233862da9bf5201197.js": "/gitcard/precache-manifest.6e80b344a0427b233862da9bf5201197.js",
+    "service-worker.js": "/gitcard/service-worker.js",
+    "static/css/2.457a6994.chunk.css.map": "/gitcard/static/css/2.457a6994.chunk.css.map",
+    "static/css/main.a72ced97.chunk.css.map": "/gitcard/static/css/main.a72ced97.chunk.css.map",
+    "static/media/all.css": "/gitcard/static/media/fa-solid-900.f14c3b2f.ttf"
+  }
+}
