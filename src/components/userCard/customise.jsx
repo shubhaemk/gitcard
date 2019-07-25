@@ -30,20 +30,20 @@ class Customise extends Component {
     }
     render(){
         return(
-            <div className='has-margin-top-30'>
-                <p className='is-size-3' style={{ color : this.props.card_text }}>Theme your card!</p>
-                <div className="control">
+            <div className='has-margin-top-30 has-text-centered-mobile'>
+                <p className='is-size-3 is-size-7-mobile' style={{ color : this.props.card_text }}>Theme your card!</p>
+                <div className="control has-text-centered-mobile">
                     <label className='radio'>
                         <input type='radio' name='theme' checked={this.props.theme === 'light'} onClick={() => this.toggleTheme('light')}></input> 
-                        <label className='has-margin-left-5' style={{ color : this.props.card_text }}>Light</label>
+                        <label className='has-margin-left-5 is-size-7-mobile' style={{ color : this.props.card_text }}>Light</label>
                     </label>
                     <label className='radio'>
                         <input type='radio' name='theme' checked={this.props.theme === 'dark'} onClick={() => this.toggleTheme('dark')}></input> 
-                        <label className='has-margin-left-5' style={{ color : this.props.card_text }}>Dark</label>
+                        <label className='has-margin-left-5 is-size-7-mobile' style={{ color : this.props.card_text }}>Dark</label>
                     </label>
                 </div>
                 <div className='has-margin-top-10'>
-                    <label className='is-size-4 has-margin-right-10' style={{ color : this.props.card_text }}>Get your card <i className="fas fa-long-arrow-alt-right has-margin-5"></i></label>
+                    <label className='is-size-4 has-margin-right-10 is-size-7-mobile' style={{ color : this.props.card_text }}>Get your card <i className="fas fa-long-arrow-alt-right has-margin-5"></i></label>
                     <button className={this.props.theme === 'light' ? "button" : 'button is-black'} onClick={() => this.downloadCard()}>Download</button>
                 </div>
             </div>

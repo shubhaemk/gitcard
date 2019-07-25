@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Profile extends Component{
     render(){
         return(
-            <div className=''>
+            <div className='is-size-7-mobile'>
                 <img className='image has-margin-10 has-margin-left-20' src={this.props.profile['avatar_url']} alt='github avatar' style={{ borderRadius : '9px', height : '180px', width : '180px' }}></img>
                 <p className='h4 has-margin-left-25' style={{color : this.props.card_text }}>{ this.props.profile['name'] === null ? null : this.props.profile['name'] } </p>
                 <p className={this.props.profile['bio'] === null ? '' : 'has-margin-bottom-10'}>

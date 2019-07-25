@@ -10,7 +10,7 @@ class Welcome extends Component {
                 return(
                     <div className='has-text-centered has-margin-bottom-60'>
                         <p className="is-size-3 is-size-6-mobile" style={{color : this.props.card_text}}>` Generate Sharable GitHub Profile Cards `</p>
-                        <img src={'./assets/home-'+this.props.theme+'.png'} alt='home-icon' height='300px' width='300px'></img>
+                        <img src={'./assets/home-'+this.props.theme+'.png'} alt='home-icon' height='250px' width='250px'></img>
                         <p className="is-size-4 is-size-6-mobile" style={{color : this.props.card_text}}>{'{ { For educational purpose only } }'}</p>
                     </div>
                 );

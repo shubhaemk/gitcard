@@ -19,7 +19,7 @@ class Card extends Component {
     render(){
         return(
             <div>
-                <div ref={this.github} className='has-margin-bottom-50 is-hidden-mobile'>
+                <div ref={this.github} className='has-margin-bottom-50 is-bottom-marginless-mobile'>
                     <div className='card' style={{ borderRadius : '9px', backgroundColor : this.props.card_background }}>
                         <div className='columns'>
                             <div className='column is-3'>
