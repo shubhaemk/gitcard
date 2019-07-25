@@ -9,9 +9,9 @@ class Welcome extends Component {
             if(this.props.user_name === '' && this.props.user_found === false){
                 return(
                     <div className='has-text-centered has-margin-bottom-60'>
-                        <p className="is-size-3" style={{color : this.props.card_text}}>` Generate Sharable GitHub Profile Cards `</p>
+                        <p className="is-size-3 is-size-6-mobile" style={{color : this.props.card_text}}>` Generate Sharable GitHub Profile Cards `</p>
                         <img src={'./assets/home-'+this.props.theme+'.png'} alt='home-icon' height='300px' width='300px'></img>
-                        <p className="is-size-4" style={{color : this.props.card_text}}>{'{ { For educational purpose only } }'}</p>
+                        <p className="is-size-4 is-size-6-mobile" style={{color : this.props.card_text}}>{'{ { For educational purpose only } }'}</p>
                     </div>
                 );
             }else if(this.props.user_name !== '' && this.props.user_found === false){
