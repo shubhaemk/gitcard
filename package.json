@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://shubhaemk.github.io/gitcard",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bulma": "^0.7.4",
     "bulma-helpers": "^0.3.7",
     "downloadjs": "^1.4.7",
